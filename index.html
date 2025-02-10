@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #f8f4ff;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            color: #ff6b00;
+            font-size: 48px;
+            font-family: 'Brush Script MT', cursive;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 24px;
+        }
+
+        .nav-dropdown {
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            margin-bottom: 30px;
+            border: 2px solid #8a2be2;
+            border-radius: 8px;
+            background: white;
+        }
+
+        .menu-section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            color: #8a2be2;
+            font-size: 28px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ff6b00;
+            padding-bottom: 10px;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .menu-item:hover {
+            background-color: #f0e6ff;
+            border-radius: 8px;
+        }
+
+        .item-name {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .item-description {
+            color: #666;
+            font-size: 0.9em;
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        .price {
+            color: #ff6b00;
+            font-weight: bold;
+            min-width: 80px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">Saffron</div>
+        <div class="subtitle">Spice Kitchen</div>
+    </div>
+
+    <select class="nav-dropdown" onchange="document.getElementById(this.value).scrollIntoView();">
+        <option value="">Select Menu Section</option>
+        <option value="starters">Starters</option>
+        <option value="vegetarian">Vegetarian Dishes</option>
+        <option value="pasta">Pasta</option>
+        <option value="chicken">Main Chicken</option>
+        <option value="rice">Basmati Rice</option>
+    </select>
+
+    <div id="starters" class="menu-section">
+        <h2 class="section-title">Starters</h2>
+        <div class="menu-item">
+            <div>
+                <div class="item-name">Fish Lemon Butter</div>
+            </div>
+            <div class="price">D325</div>
+        </div>
+        <div class="menu-item">
+            <div>
+                <div class="item-name">Mozzarella Sticks</div>
+            </div>
+            <div class="price">D500</div>
+        </div>
+        <div class="menu-item">
+            <div>
+                <div class="item-name">Golden Crispy Prawns</div>
+            </div>
+            <div class="price">D300</div>
+        </div>
+    </div>
+
+    <div id="vegetarian" class="menu-section">
+        <h2 class="section-title">Vegetarian Dishes</h2>
+        <div class="menu-item">
+            <div>
+                <div class="item-name">Paneer Tikka Masala</div>
+                <div class="item-description">Cubes of paneer cooked in rich gravy</div>
+            </div>
+            <div class="price">D395</div>
+        </div>
+        <div class="menu-item">
+            <div>
+                <div class="item-name">Mutter Mushroom</div>
+                <div class="item-description">Mushroom and peas in creamy sauce</div>
+            </div>
+            <div class="price">D350</div>
+        </div>
+    </div>
+
+    <div id="pasta" class="menu-section">
+        <h2 class="section-title">Pasta</h2>
+        <div class="menu-item">
+            <div>
+                <div class="item-name">Penne Arrabiata Chilly Chicken Vodka</div>
+                <div class="item-description">Italian red sauce with chilly</div>
+            </div>
+            <div class="price">D375</div>
+        </div>
+        <div class="menu-item">
+            <div>
+                <div class="item-name">Spaghetti Bolognese</div>
+            </div>
+            <div class="price">D275</div>
+        </div>
+    </div>
+
+    <div id="chicken" class="menu-section">
+        <h2 class="section-title">Main Chicken</h2>
+        <div class="menu-item">
+            <div>
+                <div class="item-name">Grilled Chicken in BBQ Sauce</div>
+                <div class="item-description">Chicken grilled to perfection</div>
+            </div>
+            <div class="price">D375</div>
+        </div>
+        <div class="menu-item">
+            <div>
+                <div class="item-name">Chicken in Mushroom Sauce</div>
+            </div>
+            <div class="price">D375</div>
+        </div>
+    </div>
+
+    <div id="rice" class="menu-section">
+        <h2 class="section-title">Basmati Rice</h2>
+        <div class="menu-item">
+            <div>
+                <div class="item-name">Jeera Rice</div>
+                <div class="item-description">Basmati rice cooked with cumin seeds</div>
+            </div>
+            <div class="price">D150</div>
+        </div>
+        <div class="menu-item">
+            <div>
+                <div class="item-name">Garlic Rice</div>
+            </div>
+            <div class="price">D175</div>
+        </div>
+    </div>
+</body>
+</html>
